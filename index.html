@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Me</title>
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/tailwind.min.css" title="" type="" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <audio id="bg-music" loop>
+  <source src="/audio.mp3" type="audio/mpeg">
+</audio>
+  <div class="heart-container"></div>
+  <button class="flex justify-center items-center play">Click me</button>
+  <div class="box">
+      <div class="flex items-center justify-center bg-black p-4 contain">
+    <h2 class="text-red-500 uppercase text"id="text"></h2>
+  </div>
+  <canvas id ="myCanva" class="flex justify-center items-center"></canvas>
+  <div class="love">
+    <svg width="300px" height="300px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path id="love1" d="M 983.384 381.465 c 0 -147.456 -119.467 -266.923 -266.923 -266.923 c -81.4649 0 -154.283 36.4089 -203.207 93.8662 c -48.9245 -57.4578 -121.856 -93.8662 -203.207 -93.8662 c -147.456 0 -266.923 119.467 -266.923 266.923 c 0 77.3689 35.6125 142.109 85.5609 195.811 L 514.275 947.964 l 378.994 -366.592 c 48.0142 -50.0622 90.112 -120.377 90.112 -199.907 Z" fill="#0953FF" /><path id = "love2"d="M 514.275 947.964 L 128.569 577.276 C 78.507 523.574 43.008 458.835 43.008 381.465 c 0 -147.456 119.467 -266.923 266.923 -266.923 c 81.4649 0 154.283 36.4089 203.207 93.8662 l 1.13778 739.555 Z" fill="#ec1469" /></svg>
+  </div>
+  </div>
+  <div class="mt-4  myNote">
+    <h1 id="note" class="uppercase text-center"></h1>
+    <div class="note-book flex shadow-red-500 backdrop-blur-md bg-white/20 border border-white/30 rounded-xl p-6 shadow-lg justify-center items-center">
+        <p>From the moment you walked into my life, everything felt lighter, warmer, and more meaningful. You’re not just special  you’re my favorite kind of magic. I hope you always feel how deeply you’re loved.</p>
+    </div>
+  </div>
+  <div class="flex justify-center items-center">
+    <video src="/video.mp4" height="300" width="320" preload="none" autoplay="autoplay" muted></video>
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+  <script src="/scroll.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

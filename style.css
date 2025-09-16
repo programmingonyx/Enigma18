@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+body{
+  color: white ;
+  background: black;
+  
+}
+.play{
+  padding:5px;
+  width:300px;
+  border-radius:7px;
+  border:1px solid white;
+  margin:5px 30px;
+  outline:none;
+}
+.contain{
+    height:300px;
+}
+.text{
+  color:white;
+  font-size:32px;
+}
+canvas{
+  background: black;
+  position: relative;
+}
+.love{
+  position: absolute;
+  top:230px;
+  left:30px;
+}
+#love1{
+  stroke:red;
+  stroke-width:10;
+  fill:none;
+}
+#love2{
+  stroke:#fff;
+  stroke-width:10;
+  fill:none;
+}
+.myNote{
+  height:400px;
+  background: black;
+  padding: 20px;
+}
+.note-book{
+  height:auto;
+  width:310px;
+  color:white;
+  padding: 10px;
+  font-weight:800;
+  font-family: 'dancing script';
+}
+#note{
+  font-size:32px;
+  font-family:'dancing script';
+}
+/* Heart container - stays behind your content */
+  .heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* behind everything */
+    pointer-events: none; /* doesn’t block clicks */
+  }
+
+  .heart {
+    position: absolute;
+    background: red;
+    transform: rotate(45deg);
+    opacity: 0.8;
+    animation: floatUp linear forwards;
+    aspect-ratio: 1/1;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: red;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+
+  .heart::before {
+    top: -50%;
+    left: 0;
+  }
+
+  .heart::after {
+    left: -50%;
+    top: 0;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) rotate(45deg) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) rotate(45deg) scale(1.2);
+      opacity: 0;
+    }
+  }
