@@ -10,7 +10,7 @@ gsap.registerPlugin(TextPlugin);
     yoyo:true,
     repeat:-1
   });
-gsap.registerPlugin(TextPlugin);
+/*gsap.registerPlugin(TextPlugin);
   gsap.to("#note", {
     duration: 3,
     text: {
@@ -21,10 +21,11 @@ gsap.registerPlugin(TextPlugin);
     yoyo:true,
     repeat:-1
   });
+  */
   
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 
-// Scroll up: smooth fade out, shrink, and move up
+
 gsap.fromTo(".box",
   { opacity: 1, scale: 1, y: 0 },
   {
@@ -36,11 +37,10 @@ gsap.fromTo(".box",
       trigger: ".box",
       start: "top center",
       end: "bottom top",
-      scrub: 1 // makes it smooth while scrolling
+      scrub: 1 
     }
   }
 );
-
 // Scroll down: smooth fade in, expand, and move into place
 gsap.fromTo(".box",
   { opacity: 0, scale: 0.5, y: 200 },
@@ -57,6 +57,7 @@ gsap.fromTo(".box",
     }
   }
 );
+*/
 const paths = document.querySelectorAll('path');
 
 paths.forEach(path => {
@@ -72,4 +73,63 @@ paths.forEach(path => {
     yoyo: true,
     delay: 0.5
   });
+});
+gsap.registerPlugin();
+
+/*const el = document.getElementById("note");
+const text = el.textContent;
+el.textContent = "";
+
+// Split into spans
+text.split("").forEach(char => {
+  const span = document.createElement("span");
+  span.textContent = char;
+  el.appendChild(span);
+});
+
+const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+tl.from("#note span", {
+  opacity: 0,
+  y: 30,
+  duration: 0.6,
+  stagger: 0.05,
+  ease: "power2.out"
+}).to("#note span", {
+  opacity: 0,
+  y: -30,
+  duration: 0.6,
+  stagger: 0.05,
+  ease: "power2.in",
+  delay: 1
+});*/
+
+
+
+const swiper = new Swiper('.swiper', {
+
+  loop: true,
+  effect:'fade',
+  autoplay:{
+    delay:5000,
+    disableOnInteraction:false,
+  },
+  fadeEffect:{
+    crossFade:true
+  }
+});
+const swiper2 = new Swiper('.swiper2', {
+  loop:false,
+  effect: 'fade',
+  autoplay:false,
+  slidesPerView:1,
+  allowTouchMove:false,
+  fadeEffect: {
+    crossFade: true,
+  },
+});
+
+// Button event for the proposal swiper
+document.getElementById('proposal-btn').addEventListener('click', () => {
+  swiper2.slideNext();
 });

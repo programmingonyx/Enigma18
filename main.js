@@ -6,7 +6,7 @@ canvas.height = 410
 
 var friction = 0.99
 var gravity = 1
-var colorArray = ['red','#fff','#0953FF']
+var colorArray = ['red','#fff','#ffd1dc']
 function circle(x,y,dy,radius,color) {
   this.x = x 
   this.y = y
@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
   
   music.play().catch(() => {
     // If autoplay fails, wait for user click
-    document.body.addEventListener("click", () => {
+    play.addEventListener("click", () => {
       if (music.paused) {
         music.play();
       } else {
